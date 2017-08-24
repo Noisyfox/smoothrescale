@@ -8,7 +8,7 @@
 #include <libswscale/swscale.h>
 #include <libavutil/pixfmt.h>
 
-#define LOGI(...) __android_log_print(ANDROID_LOG_INFO, "schokoladenbrown", __VA_ARGS__)
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO, "Smooth Rescale", __VA_ARGS__)
 
 struct bitmap {
     jobject           jbitmap;
