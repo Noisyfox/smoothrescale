@@ -8,12 +8,14 @@ function build_one
 {
 cd ffmpeg
 
+rm compat/strtod.o
+rm compat/strtod.d
+
 ./configure\
     --prefix=${PREFIX}/${CPU}\
     --disable-everything\
     --disable-all\
     --disable-static\
-    --disable-asm\
     --enable-shared\
     --enable-avutil\
     --enable-swscale\
