@@ -49,6 +49,7 @@ ARCH=arm
 TOOLCHAIN=arm-linux-androideabi
 TOOLCHAIN_EXEC=arm-linux-androideabi
 ADDI_CFLAGS=-marm
+ADDITIONAL_CONFIGURE_FLAG=
 build_one
 
 OUT=arm64-v8a
@@ -57,6 +58,7 @@ ARCH=aarch64
 TOOLCHAIN=aarch64-linux-android
 TOOLCHAIN_EXEC=aarch64-linux-android
 ADDI_CFLAGS=
+ADDITIONAL_CONFIGURE_FLAG=
 build_one
 
 OUT=x86
@@ -65,6 +67,7 @@ ARCH=x86
 TOOLCHAIN=x86
 TOOLCHAIN_EXEC=i686-linux-android
 ADDI_CFLAGS=
+ADDITIONAL_CONFIGURE_FLAG=--disable-asm
 build_one
 
 OUT=x86_64
@@ -73,5 +76,6 @@ ARCH=x86_64
 TOOLCHAIN=x86_64
 TOOLCHAIN_EXEC=x86_64-linux-android
 ADDI_CFLAGS=
+ADDITIONAL_CONFIGURE_FLAG=
 build_one
 

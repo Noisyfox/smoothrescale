@@ -37,6 +37,7 @@ if __name__ == '__main__':
     system, _, _, _, arch, _ = platform.uname()
     is64 = arch == 'x86_64'
     enablePIE = int(android_platform) >= 16
+    x86_disable_asm = int(android_platform) >= 23
 
     if system == 'Darwin':
         host = 'darwin-' + arch
@@ -63,4 +64,10 @@ if __name__ == '__main__':
                 f.write('ADDI_CFLAGS=-marm\n')
             else:
                 f.write('ADDI_CFLAGS=\n')
+
+            if x86_disable_asm:
+                if p.cpu == 'x86':
+                    f.write('ADDITIONAL_CONFIGURE_FLAG=--disable-asm\n')
+                else:
+                    f.write('ADDITIONAL_CONFIGURE_FLAG=\n')
             f.write('build_one\n\n')
