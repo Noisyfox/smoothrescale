@@ -6,3 +6,4 @@
 /build
 /captures
 /build_ffmpeg/build/
+/build_ffmpeg/toolchain/
